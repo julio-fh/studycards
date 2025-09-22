@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8F7FF;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: #8B5CF6;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+}
+
+.stats {
+    font-size: 1.5rem;
+    color: #3F4658;
+    padding-bottom: 2rem;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-color: #E2E2E2;
+    width: 272px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #1E1E1E;
+    cursor: pointer;
+    border-radius: 12px;
+    padding-inline: 1rem;
+}
+
+.answer {
+    background-color: #E7DDFF;
+    color: #3F4658;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.inf {
+    padding-top: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem; /* espaço entre os botões */
+    margin-top: 1rem;
+}
+
+.next-button,
+.restart-button {
+    width: 124px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* estilos individuais */
+.next-button {
+    background-color: #6A3FCB;
+    color: #FFFFFF;
+}
+
+.next-button:disabled {
+    background-color: #C9B8F9;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.restart-button {
+    background-color: #F43F5E;
+    color: #FFFFFF;
+}
+
+.restart-button:hover {
+    background-color: #e11d48;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .stats {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        min-height: 180px;
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column; /* empilha botões no mobile */
+        width: 100%;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .next-button,
+    .restart-button {
+        width: 80%; /* botões ocupam mais espaço */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.8rem;
+    }
+
+    .stats {
+        font-size: 1rem;
+    }
+
+    .card {
+        font-size: 0.9rem;
+        min-height: 150px;
+    }
+}
